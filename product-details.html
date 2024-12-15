@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - NEGO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Product Details</h1>
+    <nav>
+      <a href="index.php">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+  </header>
+  <main>
+    <section id="product-details">
+    </section>
+    <button id="order-now">Order Now</button>
+  </main>
+  <footer>
+    <p>&copy; 2024 NEGO Shop</p>
+  </footer>
+  
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name') || 'Unknown Product';
+    const price = params.get('price') || '0';
+    const img = params.get('img') || 'default.jpg'; 
+
+   
+    const productDetails = document.getElementById('product-details');
+    
+    if (name && price && img) {
+      productDetails.innerHTML = `
+        <img src="${img}" alt="${name}" style="max-width: 100%; height: auto;">
+        <h2>${name}</h2>
+        <p>Price: PHP ${price}</p>
+      `;
+    } else {
+      productDetails.innerHTML = `
+        <p>Product details are not available.</p>
+      `;
+    }
+    document.getElementById('order-now').addEventListener('click', () => {
+      alert(`Order placed for ${name} at PHP ${price}!`);
+    });
+  </script>
+</body>
+</html>

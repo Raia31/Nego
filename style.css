@@ -1,0 +1,91 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Logo Styling */
+header .logo {
+  max-width: 150px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto; /* Center the image and add spacing */
+}
+
+/* Header and Navigation */
+header {
+  background-color: #000000;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding: 10px;
+}
+
+.product-item {
+  background: rgb(63, 63, 63);
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: white;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}
